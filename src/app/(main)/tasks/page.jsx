@@ -60,12 +60,23 @@ const Page = () => {
       setTasks(filter);
       setSelected([]);
       setLoading(false);
-      toast.success("Marked successfully");
+      toast.success("Marked successfully", {
+        position: "bottom-center",
+      });
     }, 1000);
   };
   return (
     <Container className="relative">
-      <div className="w-full h-full flex flex-col gap-y-2 overflow-y-auto">
+      <div className="w-full h-full flex flex-col gap-y-2 overflow-y-auto pb-[120px] sm:pb-0">
+        <div className="px-4 py-2 w-full sticky left-0 top-0 z-10">
+          <Button
+            disabled={selected.length === 0}
+            loading={loading}
+            onClick={handleSubmit}
+            title="Mark as completed"
+            className="sticky top-0 left-0 z-10 w-full"
+          />
+        </div>
         {tasks.map((task) => (
           <TaskItem
             key={task.id}
@@ -75,16 +86,6 @@ const Page = () => {
           />
         ))}
       </div>
-      {selected.length > 0 && (
-        <>
-          <Button
-            loading={loading}
-            onClick={handleSubmit}
-            title="Mark as completed"
-            className="sticky bottom-4 left-0 mt-4"
-          />
-        </>
-      )}
     </Container>
   );
 };

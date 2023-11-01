@@ -1,7 +1,4 @@
-import Avatar from "../shared/Avatar";
-import { BsThreeDots } from "react-icons/bs";
 import Footer from "./Footer";
-import IconButton from "../shared/IconButton";
 import Header from "./Header";
 import Title from "./Title";
 import Description from "./Description";
