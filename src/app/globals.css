@@ -14,6 +14,10 @@
   -webkit-user-select: none;
 }
 
+.scrollbar {
+  scrollbar-width: 1pxs we;
+}
+
 input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }

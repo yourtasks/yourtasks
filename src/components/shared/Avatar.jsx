@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
-const Avatar = () => {
+const Avatar = ({ className }) => {
   return (
-    <div className={`relative h-7 w-7`}>
+    <div className={twMerge(`relative h-7 w-7`, className)}>
       <Image
         src={"/profile.jpg"}
         alt="profile"

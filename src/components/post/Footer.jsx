@@ -1,9 +1,13 @@
+"use client";
+
 import React from "react";
 import FooterItem from "./FooterItem";
 import Seperator from "./Seperator";
 import { BiCommentDetail, BiLike, BiShare } from "react-icons/bi";
 
 const Footer = () => {
+  const handleComment = () => {};
+
   return (
     <div className="w-full flex items-center justify-between gap-x-2">
       <FooterItem count={15} Icon={<BiLike size={20} />} />

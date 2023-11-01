@@ -4,7 +4,7 @@ import Container from "@/components/shared/Container";
 const Page = () => {
   return (
     <Container>
-      <Post type="announcement" />
+      <Post type="bloodPost" />
       <Post type="announcement" />
       <Post type="task" />
       <Post type="announcement" />

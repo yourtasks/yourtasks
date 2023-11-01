@@ -1,5 +1,13 @@
+import Container from "@/components/shared/Container";
+
 const page = () => {
-  return <div>Community</div>;
+  return (
+    <Container>
+      <div className="w-full h-full flex justify-center items-center text-xl">
+        This page is under development
+      </div>
+    </Container>
+  );
 };
 
 export default page;

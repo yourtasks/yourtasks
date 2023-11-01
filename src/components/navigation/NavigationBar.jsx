@@ -20,43 +20,45 @@ const NavigationBar = () => {
   console.log(pathname);
 
   return (
-    <div className="px-2 fixed z-40 bottom-0 left-0 sm:static sm:h-full w-full overflow-y-auto card sm:p-2 md:p-4 flex sm:flex-col gap-y-2 gap-x-1">
-      <NavItem
-        Icon={<MdOutlineHome size={30} />}
-        activeIcon={<MdHome size={30} />}
-        title="Home"
-        current={pathname}
-        href={`/`}
-      />
-      <NavItem
-        Icon={<MdOutlineCampaign size={30} />}
-        activeIcon={<MdCampaign size={30} />}
-        title="Notice"
-        current={pathname}
-        href={`/announcements`}
-      />
-      <NavItem
-        Icon={<MdOutlineTask size={30} />}
-        activeIcon={<MdTask size={30} />}
-        title="Tasks"
-        current={pathname}
-        href={`/tasks`}
-      />
-      <NavItem
-        Icon={<MdOutlineGroups size={30} />}
-        activeIcon={<MdGroups size={30} />}
-        title="Community"
-        current={pathname}
-        href={`/community`}
-      />
-      <div className="hidden sm:block">
+    <div className="absolute sm:static md:w-6/12 lg:w-3/12 h-full">
+      <div className="px-2 fixed z-40 bottom-0 left-0 sm:static sm:h-full w-full sm:overflow-y-auto card sm:p-2 md:p-4 flex sm:flex-col gap-y-2 gap-x-1 backdrop-blur-sm">
         <NavItem
-          Icon={<BiDonateBlood size={30} />}
-          activeIcon={<BiSolidDonateBlood size={30} />}
-          title="Blood Emergency"
+          Icon={<MdOutlineHome size={30} />}
+          activeIcon={<MdHome size={30} />}
+          title="Home"
           current={pathname}
-          href={`/blood-emergency`}
+          href={`/`}
         />
+        <NavItem
+          Icon={<MdOutlineCampaign size={30} />}
+          activeIcon={<MdCampaign size={30} />}
+          title="Notice"
+          current={pathname}
+          href={`/announcements`}
+        />
+        <NavItem
+          Icon={<MdOutlineTask size={30} />}
+          activeIcon={<MdTask size={30} />}
+          title="Tasks"
+          current={pathname}
+          href={`/tasks`}
+        />
+        <NavItem
+          Icon={<MdOutlineGroups size={30} />}
+          activeIcon={<MdGroups size={30} />}
+          title="Community"
+          current={pathname}
+          href={`/community`}
+        />
+        <div className="hidden sm:block">
+          <NavItem
+            Icon={<BiDonateBlood size={30} />}
+            activeIcon={<BiSolidDonateBlood size={30} />}
+            title="Blood Emergency"
+            current={pathname}
+            href={`/blood-emergency`}
+          />
+        </div>
       </div>
     </div>
   );

@@ -4,18 +4,14 @@ import TopBar from "../navigation/TopBar";
 
 const NavProvider = ({ children }) => {
   return (
-    <section className="w-full h-full flex flex-col overflow-hidden">
+    <section className="w-full h-full flex flex-col">
       <TopBar />
-      <div className="w-full h-full flex">
-        <div className="absolute sm:static md:w-6/12 lg:w-3/12 h-full">
-          <NavigationBar />
-        </div>
-        <div className="w-full lg:w-6/12 h-full flex items-center">
+      <div className="w-full h-full flex overflow-hidden">
+        <NavigationBar />
+        <div className="w-full lg:w-6/12 h-full flex items-center overflow-y-auto">
           {children}
         </div>
-        <div className="hidden lg:block lg:w-3/12">
-          <RightBar />
-        </div>
+        <RightBar />
       </div>
     </section>
   );
