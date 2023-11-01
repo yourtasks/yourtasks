@@ -1,8 +1,12 @@
 import { BsThreeDots } from "react-icons/bs";
 import Avatar from "../shared/Avatar";
 import IconButton from "../shared/IconButton";
+import moment from "moment/moment";
 
-const Header = () => {
+const Header = ({ createdAt, owner }) => {
+  const { firstname, lastname } = owner;
+  const timeAgo = moment(createdAt).fromNow();
+
   return (
     <div className="w-full flex items-center justify-between no-select">
       <div className="flex items-center gap-x-1">
@@ -14,9 +18,9 @@ const Header = () => {
             className="font-medium
            px-1 click rounded-sm"
           >
-            Md Mofazzal Hossain
+            {`${firstname} ${lastname}`}
           </h1>
-          <p className="text-xs opacity-60 font-medium px-1">12 May 2023</p>
+          <p className="text-xs opacity-60 font-medium px-1">{timeAgo}</p>
         </div>
       </div>
       <IconButton>

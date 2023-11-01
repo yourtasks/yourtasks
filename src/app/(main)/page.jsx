@@ -1,22 +1,13 @@
+import { postData } from "@/components/data/postData";
 import Post from "@/components/post/Post";
 import Container from "@/components/shared/Container";
 
 const Page = () => {
   return (
     <Container>
-      <Post type="bloodPost" />
-      <Post type="announcement" />
-      <Post type="task" />
-      <Post type="announcement" />
-      <Post type="task" />
-      <Post type="post" />
-      <Post type="post" />
-      <Post type="task" />
-      <Post type="post" />
-      <Post type="post" />
-      <Post type="task" />
-      <Post type="post" />
-      <Post type="post" />
+      {postData.map((post) => (
+        <Post key={post._id} data={post} />
+      ))}
     </Container>
   );
 };

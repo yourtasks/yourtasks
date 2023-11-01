@@ -1,5 +1,5 @@
-const Title = () => {
-  return <h1 className="font-medium">Title of the posts</h1>;
+const Title = ({ title }) => {
+  return <h1 className="font-medium capitalize">{title}</h1>;
 };
 
 export default Title;

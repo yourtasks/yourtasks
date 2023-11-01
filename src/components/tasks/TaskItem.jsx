@@ -31,7 +31,7 @@ const TaskItem = ({ completed = false, data, selected, setSelected }) => {
       >
         <div
           className={`p-1 rounded-full text-white transition cursor-pointer ${
-            checked ? "bg-green-500" : "card"
+            checked ? (completed ? "bg-green-500" : "bg-cyan-500") : "card"
           }`}
         >
           {checked ? (
@@ -47,7 +47,9 @@ const TaskItem = ({ completed = false, data, selected, setSelected }) => {
         onClick={handleClick}
         className={`relative w-full p-2 border-2  rounded-lg transition cursor-pointer ${
           checked
-            ? "bg-green-500 bg-opacity-30 border-green-500 border-opacity-50"
+            ? completed
+              ? "bg-green-500 bg-opacity-30 border-green-500 border-opacity-50"
+              : "bg-cyan-500 bg-opacity-30 border-cyan-500 border-opacity-50"
             : "card border-color"
         }`}
       >

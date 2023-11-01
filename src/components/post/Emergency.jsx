@@ -16,7 +16,7 @@ const Item = ({ label, Icon, value }) => {
 
 const Emergency = () => {
   return (
-    <div className="w-full flex flex-col gap-y-2 px-4">
+    <div className="w-full flex flex-col gap-y-2 px-4 py-2">
       <Item
         Icon={<MdWaterDrop size={20} />}
         label="blood group"

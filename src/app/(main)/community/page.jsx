@@ -1,11 +1,15 @@
+import CreatePostCard from "@/components/community/CreatePostCard";
+import { communityPost } from "@/components/data/communityPost";
+import Post from "@/components/post/Post";
 import Container from "@/components/shared/Container";
 
 const page = () => {
   return (
-    <Container>
-      <div className="w-full h-full flex justify-center items-center text-xl">
-        This page is under development
-      </div>
+    <Container className="h-full pb-[150px] sm:py-4 flex flex-col gap-y-2">
+      <CreatePostCard />
+      {communityPost.map((post) => (
+        <Post key={post._id} data={post} />
+      ))}
     </Container>
   );
 };
