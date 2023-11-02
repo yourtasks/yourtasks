@@ -45,7 +45,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .border-color {
-    @apply border-neutral-500 dark:border-neutral-500 border-opacity-30 dark:border-opacity-30;
+    @apply border-neutral-500 dark:border-neutral-700;
   }
 
   .input-field {

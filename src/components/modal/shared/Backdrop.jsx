@@ -1,6 +1,12 @@
 import { twMerge } from "tailwind-merge";
 
-const Backdrop = ({ children, className }) => {
+const Backdrop = ({
+  children,
+  className,
+  setClose,
+  closeOnBackdropMd,
+  closeOnBackdropSm,
+}) => {
   return (
     <div
       className={twMerge(
@@ -8,6 +14,14 @@ const Backdrop = ({ children, className }) => {
         className
       )}
     >
+      {setClose && (
+        <div
+          className={`absolute w-full h-full ${
+            !closeOnBackdropMd && "sm:hidden"
+          } ${!closeOnBackdropSm && "hidden"}`}
+          onClick={setClose}
+        />
+      )}
       {children}
     </div>
   );
