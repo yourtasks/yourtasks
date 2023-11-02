@@ -6,9 +6,11 @@ import TaskCard from "./TaskCard";
 import PressToCopy from "../shared/PressToCopy";
 import Emergency from "./Emergency";
 import Image from "next/image";
+import Container from "./Container";
 
-const Post = ({ data, imageUrl }) => {
+const Post = ({ data, imageUrl, gradient = false }) => {
   const {
+    _id,
     owner,
     type,
     title,
@@ -19,31 +21,33 @@ const Post = ({ data, imageUrl }) => {
     sharesCount,
   } = data;
 
+  const isAnnouncement = type === "announcement";
+  const isTask = type === "task";
+  const isBloodPost = type === "bloodPost";
+  const isPost = type === "post";
+  const isVote = type === "vote";
+
   return (
-    <div
-      className={`sm:rounded-lg w-full py-2 flex flex-col gap-y-2 ${
-        type === "bloodPost"
-          ? "bg-gradient-to-r from-red-700 dark:from-red-800 dark:to-rose-900 to-rose-800 text-white"
-          : "card"
-      }`}
+    <Container
+      className={
+        gradient &&
+        type === "bloodPost" &&
+        "bg-gradient-to-r from-red-700 dark:from-red-800 dark:to-rose-900 to-rose-800 text-white"
+      }
     >
       <div className="px-2">
         <Header createdAt={createdAt} owner={owner} />
         <PressToCopy>
-          {(type === "announcement" ||
-            type === "post" ||
-            type == "bloodPost") && (
+          {(isAnnouncement || isPost || isBloodPost) && (
             <>
-              {(type === "announcement" || type === "bloodPost") && (
-                <Title title={title} />
-              )}
+              {(isAnnouncement || isBloodPost) && <Title title={title} />}
               <Description description={description} />
             </>
           )}
         </PressToCopy>
 
-        {type === "task" && <TaskCard />}
-        {type === "bloodPost" && <Emergency />}
+        {isTask && <TaskCard />}
+        {isBloodPost && <Emergency />}
       </div>
       {imageUrl && (
         <div className="w-full h-[500px] relative">
@@ -54,8 +58,10 @@ const Post = ({ data, imageUrl }) => {
         likesCount={likesCount}
         commentsCount={commentsCount}
         sharesCount={sharesCount}
+        type={type}
+        id={_id}
       />
-    </div>
+    </Container>
   );
 };
 

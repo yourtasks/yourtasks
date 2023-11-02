@@ -55,14 +55,17 @@ const TaskItem = ({ completed = false, data, selected, setSelected }) => {
       >
         <p className="text-xs font-medium opacity-60">CSE302 - Database D1</p>
         <h1 className="font-semibold">{data.title}</h1>
-        <div className="flex justify-end items-center gap-x-4 opacity-70 text-xs">
-          <div className="flex items-center gap-x-2">
-            <MdDoneAll size={14} />
-            <p>12</p>
-          </div>
-          <div className="flex items-center gap-x-2">
-            <MdRemoveRedEye size={14} />
-            <p>25</p>
+        <div className="w-full flex items-center justify-between">
+          <p className="font-medium text-xs opacity-80">2 days ago</p>
+          <div className="flex items-center gap-x-4 opacity-70 text-xs">
+            <div className="flex items-center gap-x-2">
+              <MdDoneAll size={14} />
+              <p>12</p>
+            </div>
+            <div className="flex items-center gap-x-2">
+              <MdRemoveRedEye size={14} />
+              <p>25</p>
+            </div>
           </div>
         </div>
       </div>

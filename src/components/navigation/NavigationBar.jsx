@@ -13,12 +13,10 @@ import {
   MdTask,
 } from "react-icons/md";
 import { usePathname } from "next/navigation";
-import Count from "./Count";
 
 const NavigationBar = () => {
   const pathname = usePathname();
-
-  console.log(pathname);
+  const path = pathname === "/" ? "/" : pathname.split("/")[1];
 
   return (
     <div className="absolute sm:static md:w-6/12 lg:w-3/12 h-full">
@@ -27,38 +25,38 @@ const NavigationBar = () => {
           Icon={<MdOutlineHome size={30} />}
           activeIcon={<MdHome size={30} />}
           title="Home"
-          current={pathname}
+          current={path}
           href={`/`}
         />
         <NavItem
           Icon={<MdOutlineCampaign size={30} />}
           activeIcon={<MdCampaign size={30} />}
           title="Notice"
-          current={pathname}
-          href={`/announcements`}
+          current={path}
+          href={`announcements`}
         />
         <NavItem
           Icon={<MdOutlineTask size={30} />}
           activeIcon={<MdTask size={30} />}
           title="Tasks"
-          current={pathname}
-          href={`/tasks`}
+          current={path}
+          href={`tasks`}
           count={9}
         />
         <NavItem
           Icon={<MdOutlineGroups size={30} />}
           activeIcon={<MdGroups size={30} />}
           title="Community"
-          current={pathname}
-          href={`/community`}
+          current={path}
+          href={`community`}
         />
         <div className="hidden sm:block w-1/4 sm:w-full">
           <NavItem
             Icon={<BiDonateBlood size={30} />}
             activeIcon={<BiSolidDonateBlood size={30} />}
             title="Blood Emergency"
-            current={pathname}
-            href={`/blood-emergency`}
+            current={path}
+            href={`blood-emergency`}
             className="w-full"
           />
         </div>

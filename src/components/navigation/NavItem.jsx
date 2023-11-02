@@ -14,7 +14,7 @@ const NavItem = ({
 
   return (
     <Link
-      href={href}
+      href={href === "/" ? href : `/${href}`}
       className={twMerge(
         `relative w-1/4 sm:w-full py-2 flex flex-col sm:flex-col sm:text-xs md:flex-row items-center gap-x-4 px-4 rounded-md no-select transition ${
           isActive

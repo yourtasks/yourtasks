@@ -4,9 +4,9 @@ import Container from "@/components/shared/Container";
 
 const Page = () => {
   return (
-    <Container>
+    <Container className="md:py-4">
       {postData.map((post) => (
-        <Post key={post._id} data={post} />
+        <Post key={post._id} data={post} gradient={true} />
       ))}
     </Container>
   );

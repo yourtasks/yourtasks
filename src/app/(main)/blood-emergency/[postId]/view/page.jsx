@@ -17,7 +17,7 @@ const post = {
   sharesCount: 128,
 };
 
-const page = () => {
+const Page = () => {
   return (
     <Container className="md:py-4">
       <Post data={post} />
@@ -25,4 +25,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

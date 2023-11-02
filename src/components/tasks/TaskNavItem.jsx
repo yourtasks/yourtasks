@@ -10,7 +10,7 @@ const TaskNavItem = ({ title, path, href, route }) => {
       className={`text-center py-2 w-full font-semibold border-b-4 transition ${
         isActive
           ? "text-cyan-500 border-cyan-500"
-          : "opacity-70 border-transparent"
+          : "opacity-70 border-transparent click rounded-lg"
       }`}
     >
       {title}

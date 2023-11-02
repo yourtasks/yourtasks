@@ -15,7 +15,8 @@
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
-    "tailwind-merge": "^2.0.0"
+    "tailwind-merge": "^2.0.0",
+    "zustand": "^4.4.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
