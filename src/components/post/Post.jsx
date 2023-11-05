@@ -7,6 +7,7 @@ import PressToCopy from "../shared/PressToCopy";
 import Emergency from "./Emergency";
 import Image from "next/image";
 import Container from "./Container";
+import { MdCampaign } from "react-icons/md";
 
 const Post = ({ data, imageUrl, gradient = false }) => {
   const {
@@ -45,15 +46,14 @@ const Post = ({ data, imageUrl, gradient = false }) => {
           description={description}
         />
         <PressToCopy>
-          {(isAnnouncement || isPost || isBloodPost) && (
+          {(isAnnouncement || isPost || isBloodPost || isTask) && (
             <>
-              {(isAnnouncement || isBloodPost) && <Title title={title} />}
+              {!isPost && <Title title={title} />}
               <Description description={description} />
             </>
           )}
         </PressToCopy>
 
-        {isTask && <TaskCard />}
         {isBloodPost && <Emergency />}
       </div>
       {imageUrl && (
@@ -61,6 +61,7 @@ const Post = ({ data, imageUrl, gradient = false }) => {
           <Image src={"/profile.jpg"} alt="alt" fill className="object-cover" />
         </div>
       )}
+      {isTask && <TaskCard />}
       <Footer
         likesCount={likesCount}
         commentsCount={commentsCount}

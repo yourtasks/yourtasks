@@ -5,9 +5,11 @@ import IconButton from "../shared/IconButton";
 import { BsCircle, BsThreeDots } from "react-icons/bs";
 import { MdDoneAll, MdRemoveRedEye } from "react-icons/md";
 import { useState } from "react";
+import { useModal } from "@/hooks/useModal";
 
 const TaskItem = ({ completed = false, data, selected, setSelected }) => {
   const [checked, setChecked] = useState(completed);
+  const { setOpen } = useModal();
 
   const handleClick = () => {
     if (completed) {
@@ -21,6 +23,14 @@ const TaskItem = ({ completed = false, data, selected, setSelected }) => {
     } else {
       setSelected((prev) => [...prev, data.id]);
     }
+  };
+
+  const handleOption = (e) => {
+    const rect = e.target.getBoundingClientRect();
+    const top = rect.bottom + window.scrollY;
+    const right = Math.abs(rect.x + window.scrollY - window.innerWidth);
+
+    setOpen({ type: "task-option", data: { position: { top, right } } });
   };
 
   return (
@@ -71,7 +81,7 @@ const TaskItem = ({ completed = false, data, selected, setSelected }) => {
       </div>
 
       <div className="w-2/12 flex items-center justify-center">
-        <IconButton>
+        <IconButton onClick={handleOption}>
           <BsThreeDots size={20} />
         </IconButton>
       </div>
