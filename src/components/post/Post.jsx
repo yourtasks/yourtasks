@@ -36,7 +36,14 @@ const Post = ({ data, imageUrl, gradient = false }) => {
       }
     >
       <div className="px-2">
-        <Header createdAt={createdAt} owner={owner} />
+        <Header
+          createdAt={createdAt}
+          owner={owner}
+          type={type}
+          id={_id}
+          title={title}
+          description={description}
+        />
         <PressToCopy>
           {(isAnnouncement || isPost || isBloodPost) && (
             <>

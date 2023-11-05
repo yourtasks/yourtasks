@@ -5,8 +5,8 @@ import Close from "./shared/Close";
 import Container from "./shared/Container";
 import Option from "./shared/Option";
 import OptionList from "./shared/OptionList";
-import { MdCampaign, MdClose, MdHowToVote, MdTask } from "react-icons/md";
-import { useModal } from "../hooks/useModal";
+import { MdCampaign, MdHowToVote, MdTask } from "react-icons/md";
+import { useModal } from "@/hooks/useModal";
 
 const PostTypeModal = () => {
   const { setClose, isOpen, type } = useModal();

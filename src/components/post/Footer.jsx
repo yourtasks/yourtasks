@@ -43,7 +43,10 @@ const Footer = ({
         className={liked && "opacity-100"}
       />
       <Seperator />
-      <Link href={getSinglePostURL({ type, id })} className="w-full">
+      <Link
+        href={getSinglePostURL({ type, id, extension: "view" })}
+        className="w-full"
+      >
         <FooterItem
           count={commentsCount}
           Icon={<BiCommentDetail size={20} />}

@@ -1,4 +1,4 @@
-export const getSinglePostURL = ({ type, id }) => {
+export const getSinglePostURL = ({ type, id, extension }) => {
   const isAnnouncement = type === "announcement";
   const isTask = type === "task";
   const isBloodPost = type === "bloodPost";
@@ -15,5 +15,5 @@ export const getSinglePostURL = ({ type, id }) => {
     ? "tasks"
     : isVote && "votes";
 
-  return `/${block}/${id}/view`;
+  return `/${block}/${id}/${extension}`;
 };

@@ -1,5 +1,5 @@
 import CreatePostCard from "@/components/community/CreatePostCard";
-import { communityPost } from "@/components/data/communityPost";
+import { communityPost } from "@/data/communityPost";
 import Post from "@/components/post/Post";
 import Container from "@/components/shared/Container";
 

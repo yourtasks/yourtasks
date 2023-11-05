@@ -1,4 +1,4 @@
-import { postData } from "@/components/data/postData";
+import { postData } from "@/data/postData";
 import Post from "@/components/post/Post";
 import Container from "@/components/shared/Container";
 

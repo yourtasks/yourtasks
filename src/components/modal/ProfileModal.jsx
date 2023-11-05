@@ -1,5 +1,5 @@
 "use client";
-import { useModal } from "../hooks/useModal";
+import { useModal } from "@/hooks/useModal";
 import Backdrop from "./shared/Backdrop";
 import Container from "./shared/Container";
 
@@ -13,7 +13,7 @@ const ProfileModal = () => {
         closeOnBackdropMd={true}
         closeOnBackdropSm={true}
       >
-        <Container className="absolute z-10 top-0 right-0 w-4/12 rounded-r-none h-full">
+        <Container className="absolute z-10 top-0 right-0 min-w-[70%] sm:min-w-[400px] sm:max-w-6/12  md:max-w-4/12 rounded-r-none h-full">
           Profile Modal
         </Container>
       </Backdrop>

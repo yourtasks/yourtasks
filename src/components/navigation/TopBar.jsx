@@ -1,5 +1,5 @@
 "use client";
-import { useModal } from "../hooks/useModal";
+import { useModal } from "@/hooks/useModal";
 import Avatar from "../shared/Avatar";
 import IconButton from "../shared/IconButton";
 import Branding from "./Branding";
@@ -8,7 +8,7 @@ import { BiSearch } from "react-icons/bi";
 import { MdAdd } from "react-icons/md";
 
 const TopBar = () => {
-  const { type, setOpen } = useModal();
+  const { setOpen } = useModal();
 
   return (
     <nav className="sticky top-0 left-0 z-20 w-full flex flex-col items-center card no-select border-b-[1px] border-color">

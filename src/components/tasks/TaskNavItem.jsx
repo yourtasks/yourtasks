@@ -1,16 +1,15 @@
 import Link from "next/link";
 
 const TaskNavItem = ({ title, path, href, route }) => {
-  console.log(path);
   const isActive = path === route;
 
   return (
     <Link
       href={href}
-      className={`text-center py-2 w-full font-semibold border-b-4 transition ${
+      className={`text-center py-2 w-full font-semibold bg-zinc-800 dark:bg-zinc-300 transition ${
         isActive
-          ? "text-cyan-500 border-cyan-500"
-          : "opacity-70 border-transparent click rounded-lg"
+          ? "text-zinc-100 dark:text-zinc-900 bg-opacity-100 rounded-lg"
+          : "opacity-70  click rounded-lg bg-opacity-0 dark:bg-opacity-0"
       }`}
     >
       {title}
