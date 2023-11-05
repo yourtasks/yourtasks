@@ -4,7 +4,6 @@ import Backdrop from "./shared/Backdrop";
 import PositionContainer from "./shared/PositionContainer";
 import OptionList from "./shared/OptionList";
 import Option from "./shared/Option";
-import { GrTextAlignFull } from "react-icons/gr";
 import {
   BiArrowBack,
   BiCopy,
@@ -18,9 +17,9 @@ import { getSinglePostURL } from "../post/getSinglePostURL";
 import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
 
-const TaskOption = () => {
+const CommentOption = () => {
+  const { isOpen, type, setClose, setOpen, data } = useModal();
   const [report, setReport] = useState(false);
-  const { isOpen, type, data, setClose, setOpen } = useModal();
   const optionStyle = "text-sm font-semibold opacity-90";
 
   useEffect(() => {
@@ -57,7 +56,7 @@ const TaskOption = () => {
     setOpen({ type: "delete-post", data: { item: "post" } });
   };
 
-  if (isOpen && type === "task-option")
+  if (isOpen && type === "comment-option")
     return (
       <Backdrop
         className="bg-opacity-0"
@@ -66,7 +65,7 @@ const TaskOption = () => {
         closeOnBackdropSm={true}
       >
         <PositionContainer>
-          <OptionList>
+          <OptionList className="gap-y-1">
             {report ? (
               <>
                 <Option
@@ -84,19 +83,7 @@ const TaskOption = () => {
             ) : (
               <>
                 <Option
-                  title="Show full post"
-                  Icon={<GrTextAlignFull size={20} />}
-                  className={optionStyle}
-                  onClick={handleCopyText}
-                />
-                <Option
-                  title="copy text"
-                  Icon={<BiCopy size={20} />}
-                  className={optionStyle}
-                  onClick={handleCopyText}
-                />
-                <Option
-                  title="Edit post"
+                  title="Edit comment"
                   Icon={<BiPencil size={20} />}
                   className={optionStyle}
                   href={getSinglePostURL({
@@ -106,14 +93,8 @@ const TaskOption = () => {
                   })}
                 />
                 <Option
-                  title="Copy link to clipboard"
-                  Icon={<BiLinkAlt size={20} />}
-                  className={optionStyle}
-                  onClick={handleCopyLink}
-                />
-                <Option
                   onClick={handleDelete}
-                  title="delete post"
+                  title="delete comment"
                   Icon={<BiTrash size={20} />}
                   className={
                     optionStyle +
@@ -121,7 +102,7 @@ const TaskOption = () => {
                   }
                 />
                 <Option
-                  title="report post"
+                  title="report comment"
                   Icon={<BiFlag size={20} />}
                   className={optionStyle}
                   onClick={() => setReport(true)}
@@ -134,4 +115,4 @@ const TaskOption = () => {
     );
 };
 
-export default TaskOption;
+export default CommentOption;

@@ -15,6 +15,39 @@ export const postData = [
     sharesCount: 480,
   },
   {
+    _id: "6542501e31e6c5e382704a1a",
+    createdAt: "Thu Jan 12 2023 03:14:27 GMT+0600 (Bangladesh Standard Time)",
+    type: "vote",
+    owner: {
+      firstname: "Kathrine",
+      lastname: "Knight",
+    },
+    title: "eu ex excepteur nostrud est sint officia",
+    description:
+      "Culpa ea exercitation esse enim cupidatat laborum do anim. Sit proident Lorem adipisicing anim ex ut labore laboris dolor. Velit amet proident in nisi ipsum elit anim mollit cillum fugiat. Proident consequat proident ex et cupidatat reprehenderit reprehenderit officia reprehenderit non. Voluptate Lorem velit irure esse ut veniam laboris mollit velit id. Mollit veniam Lorem nulla pariatur do elit nostrud. Nostrud reprehenderit minim eiusmod incididunt.",
+    options: [
+      {
+        _id: "a45sdasda4sd5s4d",
+        title: "Md Mofazzal Hossain",
+        votesCount: 15,
+      },
+      {
+        _id: "a45sdasda4sd5s4d",
+        title: "Md Abu Obayda Zubayed Sayeb",
+        votesCount: 30,
+      },
+      {
+        _id: "a45sdasda4sd5s4d",
+        title: "Md Sabbir Hasan",
+        votesCount: 45,
+      },
+    ],
+    votersCount: 120,
+    likesCount: 519,
+    commentsCount: 968,
+    sharesCount: 480,
+  },
+  {
     _id: "6542501e2e242586e562ef0a",
     createdAt: "Sat Aug 20 2016 13:40:25 GMT+0600 (Bangladesh Standard Time)",
     type: "bloodPost",
@@ -163,6 +196,21 @@ export const postData = [
     likesCount: 1395,
     commentsCount: 1073,
     sharesCount: 1684,
+  },
+  {
+    _id: "6542501eb4d1e5f28468f3f9",
+    createdAt: "Wed Sep 25 2019 22:00:17 GMT+0600 (Bangladesh Standard Time)",
+    type: "task",
+    owner: {
+      firstname: "Camille",
+      lastname: "Kane",
+    },
+    title: "non mollit et ipsum irure amet Lorem",
+    description:
+      "Labore id consequat dolor velit et id in est Lorem nostrud exercitation aliqua. Veniam qui tempor do occaecat sit minim quis adipisicing elit dolore nulla ut. Laborum quis reprehenderit ut esse fugiat. Ea amet ullamco quis dolore labore enim consectetur. Mollit amet et pariatur et elit cupidatat qui anim consectetur cupidatat. Culpa voluptate elit ipsum velit elit culpa qui fugiat ea sunt. Incididunt ea adipisicing sint ipsum magna reprehenderit sit dolor.",
+    likesCount: 854,
+    commentsCount: 1831,
+    sharesCount: 1738,
   },
   {
     _id: "6542501eb4d1e5f28468f3f9",

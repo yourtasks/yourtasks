@@ -10,7 +10,7 @@ const Option = ({
   href,
 }) => {
   const style = twMerge(
-    `p-4 flex items-center gap-x-2 click rounded-lg transition opacity-70 sm:hover:opacity-100 ${
+    `p-4 flex items-center gap-x-2 click rounded-lg transition ${
       outlined &&
       "border-2 border-zinc-200 dark:border-zinc-700 active:border-zinc-300 dark:active:border-zinc-600"
     }`,

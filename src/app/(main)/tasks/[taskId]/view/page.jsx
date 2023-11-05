@@ -1,3 +1,4 @@
+import CommentList from "@/components/comments/CommentList";
 import Post from "@/components/post/Post";
 import Container from "@/components/shared/Container";
 const task = {
@@ -17,8 +18,9 @@ const task = {
 };
 const page = () => {
   return (
-    <Container className="sm:py-4">
+    <Container className="sm:py-4 overflow-y-auto">
       <Post data={task} />
+      <CommentList />
     </Container>
   );
 };

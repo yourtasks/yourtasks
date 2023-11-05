@@ -1,3 +1,4 @@
+import CommentList from "@/components/comments/CommentList";
 import Post from "@/components/post/Post";
 import Container from "@/components/shared/Container";
 
@@ -19,8 +20,9 @@ const post = {
 
 const Page = () => {
   return (
-    <Container className="md:py-4">
+    <Container className="md:py-4 overflow-y-auto">
       <Post data={post} />
+      <CommentList />
     </Container>
   );
 };

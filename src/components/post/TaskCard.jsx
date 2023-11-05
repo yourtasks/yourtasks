@@ -17,7 +17,7 @@ const TaskCard = () => {
     <>
       <div
         onClick={handleToggle}
-        className="mx-4 my-2 py-2 text-lg font-semibold opacity-90 border-2 border-color  border-dashed flex flex-col items-center justify-center rounded-lg click"
+        className="no-select mx-4 my-2 py-2 text-lg font-semibold opacity-90 border-2 border-color  border-dashed flex flex-col items-center justify-center rounded-lg click"
       >
         <p className="text-lg font-semibold opacity-70 tracking-widest uppercase">
           Deadline

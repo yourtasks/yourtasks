@@ -1,3 +1,4 @@
+import CommentOption from "../modal/CommentOption";
 import Delete from "../modal/Delete";
 import PostOption from "../modal/PostOption";
 import PostTypeModal from "../modal/PostTypeModal";
@@ -12,6 +13,7 @@ const ModalProvider = () => {
       <PostOption />
       <Delete />
       <TaskOption />
+      <CommentOption />
     </>
   );
 };

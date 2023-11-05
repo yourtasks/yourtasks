@@ -23,7 +23,7 @@ const PostTypeModal = () => {
           <h1 className="w-full text-center text-lg sm:text-2xl fon-semibold opacity-70 capitalize">
             Type of creation
           </h1>
-          <OptionList className="pt-4">
+          <OptionList className="gap-y-1 pt-4">
             <Option
               Icon={
                 <div className="text-[20px] sm:text-[30px]">
@@ -56,7 +56,7 @@ const PostTypeModal = () => {
             />
             <Option
               Icon={
-                <div className="text-[20px] sm:text-[30px]">
+                <div className=" text-[20px] sm:text-[30px]">
                   <MdHowToVote />
                 </div>
               }
