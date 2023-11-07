@@ -83,7 +83,7 @@ const CommentOption = () => {
             ) : (
               <>
                 <Option
-                  title="Edit comment"
+                  title="Edit"
                   Icon={<BiPencil size={20} />}
                   className={optionStyle}
                   href={getSinglePostURL({
@@ -94,7 +94,7 @@ const CommentOption = () => {
                 />
                 <Option
                   onClick={handleDelete}
-                  title="delete comment"
+                  title="delete"
                   Icon={<BiTrash size={20} />}
                   className={
                     optionStyle +
@@ -102,7 +102,7 @@ const CommentOption = () => {
                   }
                 />
                 <Option
-                  title="report comment"
+                  title="report this comment"
                   Icon={<BiFlag size={20} />}
                   className={optionStyle}
                   onClick={() => setReport(true)}

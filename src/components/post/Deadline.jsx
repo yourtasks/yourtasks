@@ -2,7 +2,7 @@
 import moment from "moment";
 import { useState } from "react";
 
-const TaskCard = () => {
+const Deadline = ({ vote }) => {
   const [toggle, setToggle] = useState(false);
   const deadline = new Date();
 
@@ -20,7 +20,7 @@ const TaskCard = () => {
         className="no-select mx-4 my-2 py-2 text-lg font-semibold opacity-90 border-2 border-color  border-dashed flex flex-col items-center justify-center rounded-lg click"
       >
         <p className="text-lg font-semibold opacity-70 tracking-widest uppercase">
-          Deadline
+          {vote ? `Vote ends ${toggle ? " in" : " at"}` : "Deadline"}
         </p>
         <p>{toggle ? timeAgo : formattedDate}</p>
       </div>
@@ -28,4 +28,4 @@ const TaskCard = () => {
   );
 };
 
-export default TaskCard;
+export default Deadline;

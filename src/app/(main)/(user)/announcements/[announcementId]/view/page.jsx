@@ -1,13 +1,10 @@
-import Description from "@/components/post/Description";
-import Footer from "@/components/post/Footer";
-import Header from "@/components/post/Header";
-import Title from "@/components/post/Title";
+"use client";
 import Container from "@/components/shared/Container";
-import PostContainer from "@/components/post/Container";
-import PressToCopy from "@/components/shared/PressToCopy";
+
 import Post from "@/components/post/Post";
-import Comment from "@/components/comments/Comment";
 import CommentList from "@/components/comments/CommentList";
+import CommentBar from "@/components/comments/CommentBar";
+import TextArea from "@/components/form/TextArea";
 
 const post = {
   _id: "6542501eb4d1e5f28468f3f9",
@@ -26,22 +23,12 @@ const post = {
 };
 
 const page = () => {
-  const {
-    _id,
-    createdAt,
-    title,
-    description,
-    likesCount,
-    commentsCount,
-    sharesCount,
-    owner,
-    type,
-  } = post;
-
   return (
-    <Container className="flex flex-col gap-y-2 py-2 overflow-y-auto">
+    <Container className="flex flex-col gap-y-2 py-2">
+      <TextArea placeholder="Test" />
       <Post data={post} />
       <CommentList />
+      <CommentBar />
     </Container>
   );
 };

@@ -18,7 +18,7 @@ const NavItem = ({
       className={twMerge(
         `relative w-1/4 sm:w-full py-2 flex flex-col sm:flex-col sm:text-xs md:flex-row items-center gap-x-4 px-4 rounded-md no-select transition ${
           isActive
-            ? "active-navitem sm:font-semibold scale-105 text-white"
+            ? "bg-cyan sm:font-semibold scale-105 text-white"
             : "click opacity-80"
         }`,
         className

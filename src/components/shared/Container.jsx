@@ -6,7 +6,7 @@ const Container = ({ children, className }) => {
     <div className="h-full w-full flex flex-col gap-y-2 items-center">
       <div
         className={twMerge(
-          "h-full w-full sm:w-[500px] flex flex-col gap-y-2",
+          "h-full w-full min-w-[450px] sm:max-w-[70%] flex flex-col gap-y-2",
           className
         )}
       >

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.test {
-  
-}
 
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -17,6 +14,7 @@
   -ms-touch-select: none;
   -webkit-user-select: none;
 }
+
 
 .scrollbar {
   scrollbar-width: 1pxs we;
@@ -44,6 +42,10 @@ input[type="number"]::-webkit-inner-spin-button {
     @apply bg-neutral-900 dark:bg-neutral-100;
   }
 
+  .text-cyan{
+    @apply text-cyan-500 dark:text-cyan-600
+  }
+
   body {
     @apply bg;
   }
@@ -53,7 +55,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .input-field {
-    @apply text-sm font-medium invert-bg bg-opacity-10 dark:bg-opacity-10 outline-none placeholder:text-neutral-500 selection:bg-cyan-500 ring-2  ring-cyan-500 px-4 py-2 w-full ring-opacity-0 focus:ring-opacity-100 focus:bg-opacity-5 resize-none transition disabled:bg-opacity-5 dark:disabled:bg-opacity-5;
+    @apply font-medium invert-bg bg-opacity-10 dark:bg-opacity-10 outline-none placeholder:text-neutral-500 selection:bg-cyan-500 ring-2  ring-cyan-500 p-3 w-full ring-opacity-0 focus:ring-opacity-100 focus:bg-opacity-5 resize-none transition disabled:bg-opacity-5 dark:disabled:bg-opacity-5 rounded-md;
   }
 
   .button {
@@ -88,7 +90,7 @@ input[type="number"]::-webkit-inner-spin-button {
     @apply top-space bottom-space;
   }
 
-  .active-navitem {
+  .bg-cyan {
     @apply bg-cyan-500 dark:bg-cyan-600;
   }
 

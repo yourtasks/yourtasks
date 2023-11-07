@@ -21,6 +21,8 @@ const page = () => {
   return (
     <Container className="md:py-4">
       <Post data={post} />
+      <Post data={post} />
+      <Post data={post} />
     </Container>
   );
 };

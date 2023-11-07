@@ -16,7 +16,7 @@ const VoteOption = ({ data, votersCount = 120, voted, onCLick }) => {
           voted ? "bg-cyan-500" : "invert-bg bg-opacity-10 dark:bg-opacity-10"
         }`}
       />
-      <div className="relative w-[150px] h-[100px] z-30">
+      <div className="relative h-[70px] w-[70px] sm:w-[150px] sm:h-[100px] z-30">
         <Image src={"/profile.jpg"} alt="alt" fill className="object-cover" />
       </div>
       <div
@@ -24,15 +24,13 @@ const VoteOption = ({ data, votersCount = 120, voted, onCLick }) => {
         className="relative w-full h-full flex items-center justify-between px-4 no-select cursor-pointer"
       >
         <div
-          className={`absolute top-0 left-0 h-full bg-opacity-30 ${
+          className={`absolute top-0 left-0 h-full bg-opacity-30 transition ${
             voted && "  bg-cyan-500"
           }`}
           style={{ width: `${avgVotes}%` }}
         />
         <p className="text-lg font-semibold relative z-10">{title}</p>
-        <p className="font-semibold">
-          {voted ? `${avgVotes}%` : "Click to vote"}
-        </p>
+        {voted && <p className="font-semibold text-center">{`${avgVotes}%`}</p>}
       </div>
     </div>
   );

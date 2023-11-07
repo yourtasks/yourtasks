@@ -2,13 +2,13 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Title from "./Title";
 import Description from "./Description";
-import TaskCard from "./TaskCard";
+import Deadline from "./Deadline";
 import PressToCopy from "../shared/PressToCopy";
 import Emergency from "./Emergency";
 import Image from "next/image";
 import Container from "./Container";
-import { MdCampaign } from "react-icons/md";
 import Vote from "./Vote";
+import { useModal } from "@/hooks/useModal";
 
 const Post = ({ data, imageUrl, gradient = false }) => {
   const {
@@ -61,7 +61,7 @@ const Post = ({ data, imageUrl, gradient = false }) => {
         </div>
       )}
       {isVote && <Vote options={options} votersCount={votersCount} />}
-      {(isTask || isVote) && <TaskCard />}
+      {(isTask || isVote) && <Deadline vote={isVote} />}
       <Footer
         likesCount={likesCount}
         commentsCount={commentsCount}

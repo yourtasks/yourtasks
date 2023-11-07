@@ -1,4 +1,5 @@
 import Comment from "./Comment";
+import CommentBar from "./CommentBar";
 
 const CommentList = () => {
   return (

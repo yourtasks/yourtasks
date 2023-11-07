@@ -1,1 +1,1 @@
-export const hideNavigation = ["view", "create"];
+export const hideNavigation = ["view", "create", "login"];

@@ -6,6 +6,7 @@ import OptionList from "./shared/OptionList";
 import Avatar from "../shared/Avatar";
 import Option from "./shared/Option";
 import { BsPostcard } from "react-icons/bs";
+import { BiLogOut } from "react-icons/bi";
 
 const ProfileModal = () => {
   const { isOpen, type, setClose } = useModal();
@@ -31,6 +32,12 @@ const ProfileModal = () => {
               </div>
             </div>
             <Option title="Your posts" Icon={<BsPostcard size={20} />} />
+            <Option
+              title="Log out"
+              Icon={<BiLogOut size={20} />}
+              href={`/login`}
+              className="bg-rose-500 bg-opacity-10 text-rose-500 border-2 border-rose-500 border-opacity-50 font-semibold"
+            />
           </OptionList>
         </Container>
       </Backdrop>

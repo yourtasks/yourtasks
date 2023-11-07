@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ModalProvider />
         <Toaster />
         <main className="w-screen h-screen">{children}</main>
       </body>

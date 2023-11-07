@@ -11,11 +11,12 @@ const Delete = () => {
   const [loading, setLoading] = useState(false);
 
   const handleDelete = () => {
-    setLoading(true);
+    setClose();
+
+    const loadingToast = toast.loading("Deleting post");
 
     setTimeout(() => {
-      setLoading(false);
-      toast.success("Post has been deleted");
+      toast.success("Post has been deleted", { id: loadingToast });
       setClose();
     }, 2000);
   };

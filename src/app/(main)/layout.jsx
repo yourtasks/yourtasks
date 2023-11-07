@@ -1,7 +1,12 @@
-import NavProvider from "@/components/providers/NavProvider";
+import ModalProvider from "@/components/providers/ModalProvider";
 
 const layout = ({ children }) => {
-  return <NavProvider>{children}</NavProvider>;
+  return (
+    <>
+      <ModalProvider />
+      {children}
+    </>
+  );
 };
 
 export default layout;
