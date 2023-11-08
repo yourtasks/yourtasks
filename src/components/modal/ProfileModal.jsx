@@ -16,20 +16,25 @@ import {
 import Link from "next/link";
 
 const Seperator = ({ title = "Seperator" }) => {
-  return <div className="font-semibold opacity-60 capitalize">{title}</div>;
+  return (
+    <div className="font-semibold opacity-60 capitalize text-xs sm:text-base">
+      {title}
+    </div>
+  );
 };
 
 const ProfileModal = () => {
   const { isOpen, type, setClose } = useModal();
   if (isOpen && type === "profile")
     return (
-      <Backdrop
-        className="bg-opacity-70 dark:bg-opacity-70"
-        setClose={setClose}
-        closeOnBackdropMd={true}
-        closeOnBackdropSm={true}
-      >
-        <Container className="absolute z-10 top-0 right-0 w-[70%] sm:w-[400px] sm:max-w-6/12  md:max-w-4/12 rounded-r-none h-full">
+      <>
+        <Backdrop
+          className="bg-opacity-70 dark:bg-opacity-70 z-50"
+          setClose={setClose}
+          closeOnBackdropMd={true}
+          closeOnBackdropSm={true}
+        />
+        <Container className="fixed z-[51] top-0 right-0 w-[70%] sm:w-[400px] sm:max-w-6/12  md:max-w-4/12 rounded-r-none h-full overflow-y-auto">
           <OptionList className="gap-y-2">
             <Link
               href={`/u/username`}
@@ -55,12 +60,17 @@ const ProfileModal = () => {
               href={`/u/username/posts`}
               setClose={setClose}
             />
-            <Option title="Friends" Icon={<MdGroup />} />
+            <Option
+              title="Friends"
+              Icon={<MdGroup />}
+              href={`/u/username/friends`}
+            />
             <Seperator title="Account & Settings" />
             <Option title="Account" Icon={<MdAccountBox />} />
             <Option title="Security" Icon={<MdOutlineSecurity />} />
             <Option title="Help" Icon={<BiSolidHelpCircle />} />
             <Option title="Terms of Service" Icon={<BsFillBagFill />} />
+            <Seperator title="Theme" />
             <Option title="Dark Mode" Icon={<MdModeNight />} />
             <Seperator title="Share" />
             <Option title="Download App" Icon={<BiSolidDownload />} />
@@ -72,7 +82,7 @@ const ProfileModal = () => {
             />
           </OptionList>
         </Container>
-      </Backdrop>
+      </>
     );
 };
 

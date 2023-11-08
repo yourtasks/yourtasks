@@ -16,7 +16,7 @@ const VoteOption = ({ data, votersCount = 120, voted, onCLick }) => {
           voted ? "bg-cyan-500" : "invert-bg bg-opacity-10 dark:bg-opacity-10"
         }`}
       />
-      <div className="relative h-[70px] w-[70px] sm:w-[150px] sm:h-[100px] z-30">
+      <div className="relative h-[80px] w-[120px] sm:w-[150px] sm:h-[100px] z-30">
         <Image src={"/profile.jpg"} alt="alt" fill className="object-cover" />
       </div>
       <div

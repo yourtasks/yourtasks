@@ -6,10 +6,10 @@ const TaskNavItem = ({ title, path, href, route }) => {
   return (
     <Link
       href={href}
-      className={`text-center py-2 w-full font-semibold bg-zinc-800 dark:bg-zinc-300 transition ${
+      className={`text-center py-2 w-full font-semibold transition ${
         isActive
-          ? "text-zinc-100 dark:text-zinc-900 bg-opacity-100 rounded-lg"
-          : "opacity-70  click rounded-lg bg-opacity-0 dark:bg-opacity-0"
+          ? "text-cyan-500 rounded-lg bg-cyan bg-opacity-20 cursor-default"
+          : "opacity-70 hover:opacity-100  click rounded-lg bg-opacity-0 dark:bg-opacity-0"
       }`}
     >
       {title}

@@ -68,15 +68,15 @@ const Page = () => {
   };
   return (
     <Container className="relative">
-      <div className="w-full h-full flex flex-col gap-y-2 overflow-y-auto pb-[120px]">
+      <div className="w-full h-full flex flex-col gap-y-2 overflow-y-auto pb-[200px]">
         {tasks.length > 0 && (
-          <div className="px-4 py-2 w-full sticky left-0 top-0 z-10">
+          <div className="fixed sm:sticky bottom-[64px] sm:top-0 left-0 z-10 w-full px-4 py-2">
             <Button
               disabled={selected.length === 0}
               loading={loading}
               onClick={handleSubmit}
               title="Mark as completed"
-              className="sticky top-0 left-0 z-10 w-full"
+              className="w-full"
             />
           </div>
         )}

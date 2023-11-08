@@ -25,7 +25,7 @@ const NavItem = ({
       )}
     >
       {Icon && <div className="">{isActive ? activeIcon : Icon}</div>}
-      <p className="text-[10px] sm:text-xs md:text-sm text-center md:text-start">
+      <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-center md:text-start">
         {title}
       </p>
       {count && (
