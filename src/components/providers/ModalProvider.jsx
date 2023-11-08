@@ -10,10 +10,7 @@ const ModalProvider = () => {
     <>
       <ProfileModal />
       <PostTypeModal />
-      <PostOption />
       <Delete />
-      <TaskOption />
-      <CommentOption />
     </>
   );
 };

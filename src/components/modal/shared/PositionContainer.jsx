@@ -1,13 +1,11 @@
 "use client";
 
 import Container from "@/components/modal/shared/Container";
-import { useModal } from "@/hooks/useModal";
 import { useEffect, useRef, useState } from "react";
 
 const PositionContainer = ({ children }) => {
+  const [below, setBelow] = useState(false);
   const modalRef = useRef();
-  const { data } = useModal();
-  const [pos, setPos] = useState(data.position);
 
   useEffect(() => {
     if (modalRef) {
@@ -15,21 +13,20 @@ const PositionContainer = ({ children }) => {
       const modalHeight = rect.y + rect.height;
 
       if (modalHeight > window.innerHeight) {
-        setPos((prev) => ({
-          ...prev,
-          top: data.position.top - (modalHeight - window.innerHeight),
-        }));
+        setBelow(true);
+      } else {
+        setBelow(false);
       }
     }
-  }, [modalRef, data]);
+  }, []);
 
   return (
     <div
+      onClick={(e) => e.stopPropagation()}
       ref={modalRef}
-      className={`fixed`}
-      style={{ top: pos.top, right: pos.right }}
+      className={`absolute ${below ? "bottom-8" : "top-8"} right-8 z-50`}
     >
-      <Container className="border-2 border-color px-0 py-1 sm:p-2">
+      <Container className="min-w-max border-2 border-color px-0 py-1 sm:p-2">
         {children}
       </Container>
     </div>

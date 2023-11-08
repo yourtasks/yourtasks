@@ -20,7 +20,7 @@ const post = {
 
 const Page = () => {
   return (
-    <Container className="md:py-4 overflow-y-auto">
+    <Container className="md:py-4">
       <Post data={post} />
       <CommentList />
     </Container>

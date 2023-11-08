@@ -18,7 +18,7 @@ const task = {
 };
 const page = () => {
   return (
-    <Container className="sm:py-4 overflow-y-auto">
+    <Container className="sm:py-4">
       <Post data={task} />
       <CommentList />
     </Container>

@@ -1,3 +1,5 @@
+import CommentBar from "@/components/comments/CommentBar";
+import CommentList from "@/components/comments/CommentList";
 import Post from "@/components/post/Post";
 import Container from "@/components/shared/Container";
 
@@ -20,6 +22,8 @@ const page = () => {
   return (
     <Container className="md:py-4">
       <Post data={post} />
+      <CommentList />
+      <CommentBar />
     </Container>
   );
 };

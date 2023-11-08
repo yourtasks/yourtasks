@@ -6,10 +6,11 @@ import { BsCircle, BsThreeDots } from "react-icons/bs";
 import { MdDoneAll, MdRemoveRedEye } from "react-icons/md";
 import { useState } from "react";
 import { useModal } from "@/hooks/useModal";
+import TaskOption from "../modal/TaskOption";
 
 const TaskItem = ({ completed = false, data, selected, setSelected }) => {
   const [checked, setChecked] = useState(completed);
-  const { setOpen } = useModal();
+  const [showOption, setShowOption] = useState(false);
 
   const handleClick = () => {
     if (completed) {
@@ -25,12 +26,11 @@ const TaskItem = ({ completed = false, data, selected, setSelected }) => {
     }
   };
 
-  const handleOption = (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const top = rect.bottom + window.scrollY;
-    const right = Math.abs(rect.x + window.scrollY - window.innerWidth);
-
-    setOpen({ type: "task-option", data: { position: { top, right } } });
+  const handleShowOption = () => {
+    setShowOption(true);
+  };
+  const handleHideOption = () => {
+    setShowOption(false);
   };
 
   return (
@@ -81,8 +81,9 @@ const TaskItem = ({ completed = false, data, selected, setSelected }) => {
       </div>
 
       <div className="w-2/12 flex items-center justify-center">
-        <IconButton onClick={handleOption}>
+        <IconButton onClick={handleShowOption} className="relative">
           <BsThreeDots size={20} />
+          {showOption && <TaskOption setClose={handleHideOption} data={{}} />}
         </IconButton>
       </div>
     </div>

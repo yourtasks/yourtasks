@@ -10,7 +10,7 @@ const Backdrop = ({
   return (
     <div
       className={twMerge(
-        "fixed top-0 left-0 w-full h-full z-50 bg flex flex-col items-center justify-end sm:justify-center",
+        "fixed top-0 left-0 w-full h-full z-40 bg flex flex-col items-center justify-end sm:justify-center",
         className
       )}
     >
@@ -19,7 +19,10 @@ const Backdrop = ({
           className={`absolute w-full h-full ${
             !closeOnBackdropMd && "sm:hidden"
           } ${!closeOnBackdropSm && "hidden"}`}
-          onClick={setClose}
+          onClick={(e) => {
+            e.stopPropagation();
+            setClose();
+          }}
         />
       )}
       {children}

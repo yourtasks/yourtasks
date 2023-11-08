@@ -8,7 +8,6 @@ import Emergency from "./Emergency";
 import Image from "next/image";
 import Container from "./Container";
 import Vote from "./Vote";
-import { useModal } from "@/hooks/useModal";
 
 const Post = ({ data, imageUrl, gradient = false }) => {
   const {

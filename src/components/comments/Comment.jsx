@@ -7,23 +7,26 @@ import Description from "../post/Description";
 import Footer from "./Footer";
 import moment from "moment";
 import { useModal } from "@/hooks/useModal";
+import CommentOption from "../modal/CommentOption";
 
 const Comment = () => {
-  const { setOpen } = useModal();
+  const [showOption, setShowOption] = useState(false);
   const [toggle, setToggle] = useState(false);
   const formattedDate = moment(new Date()).format("DD MMM YY, [at] HH:MM A");
   const timeAgo = moment(new Date()).fromNow();
+
+  console.log(showOption);
 
   const handleToggle = () => {
     setToggle((prev) => !prev);
   };
 
-  const handleOption = (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const top = rect.bottom + scrollY;
-    const right = Math.abs(rect.x + window.scrollY - window.innerWidth);
+  const handleShowOption = () => {
+    setShowOption(true);
+  };
 
-    setOpen({ type: "comment-option", data: { position: { top, right } } });
+  const handleHideOption = () => {
+    setShowOption(false);
   };
 
   return (
@@ -50,8 +53,9 @@ const Comment = () => {
         />
         <Footer />
       </div>
-      <IconButton onClick={handleOption}>
+      <IconButton onClick={handleShowOption} className="relative">
         <BsThreeDotsVertical size={20} />
+        {showOption && <CommentOption setClose={handleHideOption} data={{}} />}
       </IconButton>
     </div>
   );

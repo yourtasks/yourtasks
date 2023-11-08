@@ -8,6 +8,10 @@ import Option from "./shared/Option";
 import { BsPostcard } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 
+const Seperator = ({ title = "Seperator" }) => {
+  return <p className="font-semibold opacity-60 capitalize">{title}</p>;
+};
+
 const ProfileModal = () => {
   const { isOpen, type, setClose } = useModal();
   if (isOpen && type === "profile")
@@ -31,7 +35,15 @@ const ProfileModal = () => {
                 <p className="text-sm font-semibold opacity-70">Mofazzal</p>
               </div>
             </div>
+            <Seperator title="Your Profile" />
             <Option title="Your posts" Icon={<BsPostcard size={20} />} />
+            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
+            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
+            <Seperator title="Account & Settings" />
+            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
+            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
+            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
+            <Seperator title="Authentication" />
             <Option
               title="Log out"
               Icon={<BiLogOut size={20} />}
