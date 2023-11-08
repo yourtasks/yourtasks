@@ -5,8 +5,14 @@ import Container from "./shared/Container";
 import OptionList from "./shared/OptionList";
 import Avatar from "../shared/Avatar";
 import Option from "./shared/Option";
-import { BsPostcard } from "react-icons/bs";
-import { BiLogOut } from "react-icons/bi";
+import { BsFillBagFill, BsFillPostcardFill } from "react-icons/bs";
+import { BiLogOut, BiSolidDownload, BiSolidHelpCircle } from "react-icons/bi";
+import {
+  MdAccountBox,
+  MdGroup,
+  MdModeNight,
+  MdOutlineSecurity,
+} from "react-icons/md";
 
 const Seperator = ({ title = "Seperator" }) => {
   return <p className="font-semibold opacity-60 capitalize">{title}</p>;
@@ -36,14 +42,22 @@ const ProfileModal = () => {
               </div>
             </div>
             <Seperator title="Your Profile" />
-            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
-            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
-            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
+            <Option
+              title="Your posts"
+              Icon={<BsFillPostcardFill size={20} />}
+            />
+            <Option title="Friends" Icon={<MdGroup size={20} />} />
             <Seperator title="Account & Settings" />
-            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
-            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
-            <Option title="Your posts" Icon={<BsPostcard size={20} />} />
-            <Seperator title="Authentication" />
+            <Option title="Account" Icon={<MdAccountBox size={20} />} />
+            <Option title="Security" Icon={<MdOutlineSecurity size={20} />} />
+            <Option title="Help" Icon={<BiSolidHelpCircle size={20} />} />
+            <Option
+              title="Terms of Service"
+              Icon={<BsFillBagFill size={20} />}
+            />
+            <Option title="Dark Mode" Icon={<MdModeNight size={20} />} />
+            <Seperator title="Share" />
+            <Option title="Download App" Icon={<BiSolidDownload size={20} />} />
             <Option
               title="Log out"
               Icon={<BiLogOut size={20} />}
