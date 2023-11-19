@@ -22,12 +22,12 @@ const Navigation = () => {
         path={path}
         href={`/u/${username}`}
         Icon={
-          <div className="text-[30px] md:text-[30px]">
+          <div className="text-[20px] md:text-[30px]">
             <FaRegAddressCard />
           </div>
         }
         activeIcon={
-          <div className="text-[30px] md:text-[30px]">
+          <div className="text-[20px] md:text-[30px]">
             <FaAddressCard />
           </div>
         }
@@ -38,12 +38,12 @@ const Navigation = () => {
         path={path}
         href={`/u/${username}/posts`}
         Icon={
-          <div className="text-[30px] md:text-[30px]">
+          <div className="text-[20px] md:text-[30px]">
             <MdOutlineLibraryBooks />
           </div>
         }
         activeIcon={
-          <div className="text-[30px] md:text-[30px]">
+          <div className="text-[20px] md:text-[30px]">
             <MdLibraryBooks />
           </div>
         }
@@ -54,12 +54,12 @@ const Navigation = () => {
         path={path}
         href={`/u/${username}/friends`}
         Icon={
-          <div className="text-[30px] md:text-[30px]">
+          <div className="text-[20px] md:text-[30px]">
             <MdOutlineGroup />
           </div>
         }
         activeIcon={
-          <div className="text-[30px] md:text-[30px]">
+          <div className="text-[20px] md:text-[30px]">
             <MdGroup />
           </div>
         }
