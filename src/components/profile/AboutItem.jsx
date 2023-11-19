@@ -7,16 +7,20 @@ const AboutItem = ({ Icon = "Icon", title = "Title", bottom, prefix }) => {
     <div className="w-full flex items-center justify-between">
       <div className="w-full flex items-center gap-x-4">
         {Icon && (
-          <div className="text-[30px] text-zinc-500 font-semibold">{Icon}</div>
+          <div className="text-[20px] md:text-[30px] text-zinc-500 font-semibold">
+            {Icon}
+          </div>
         )}
         <div>
-          <h1 className="font-semibold">
+          <h1 className="font-semibold text-sm md:text-base">
             {prefix && (
               <span className="pr-1 opacity-80 font-medium">{prefix}</span>
             )}
             {title}
           </h1>
-          {bottom && <p className="text-xs opacity-80">{bottom}</p>}
+          {bottom && (
+            <p className="text-[10px] md:text-xs opacity-80">{bottom}</p>
+          )}
         </div>
       </div>
       <IconButton>

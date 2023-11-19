@@ -9,7 +9,7 @@ const NavProvider = ({ children }) => {
       <div className="w-full h-full flex overflow-hidden">
         <NavigationBar />
         <div
-          className={`w-full lg:w-6/12 h-full flex items-center overflow-y-auto`}
+          className={`w-full md:w-8/12 lg:w-6/12 h-full flex items-center overflow-y-auto`}
         >
           {children}
         </div>

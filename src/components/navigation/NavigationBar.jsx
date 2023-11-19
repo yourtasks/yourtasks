@@ -24,7 +24,7 @@ const NavigationBar = () => {
   const hide = hideNavigation.some((item) => pathname.includes(item));
 
   return (
-    <div className="absolute sm:static md:w-6/12 lg:w-3/12 h-full">
+    <div className="absolute sm:static md:w-4/12 lg:w-3/12 h-full">
       {!hide && (
         <div className="px-2 border-[1px] border-color sm:border-transparent fixed z-40 bottom-0 left-0 sm:static sm:h-full w-full sm:overflow-y-auto card sm:p-2 md:p-4 flex justify-between sm:justify-normal sm:flex-col gap-y-2 gap-x-1 backdrop-blur-sm">
           <NavItem
